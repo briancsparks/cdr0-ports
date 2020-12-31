@@ -10,6 +10,8 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "@cdr0/active-development": "^1.0.3",
+    "@cdr0/grumpy": "^1.0.0",
     "dotenv": "^8.2.0"
   },
   "devDependencies": {
