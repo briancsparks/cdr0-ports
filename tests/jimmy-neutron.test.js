@@ -10,7 +10,7 @@ test('ava works', (t) => {
 test('knows Jimmy Neutron', (t) => {
   const jimmy = getPort('jimmy_neutron');
 
-  t.is(3210, jimmy);
+  t.is(3210, jimmy.port);
 });
 
 

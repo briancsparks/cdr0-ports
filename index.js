@@ -8,12 +8,23 @@ const grumpy  = new grump.Grumpy({pkgname: '@cdr0/ports', modname: 'ports', __fi
 module.exports = function (name) {
 
   const ports = {
-    kafka: {},
+    kafka: {
+      development: {
+        port: 9092,
+        address: 'sparksb6-wsl2.cdr0.net',
+      },
+    },
     omega_server: {
-      development: 9880,
+      development: {
+        port: 9880,
+        address: 'sparksb6.cdr0.net',
+      },
     },
 
-    jimmy_neutron: 3210,    /* for tests */
+    jimmy_neutron: {
+      port: 3210,
+      address: 'sparksb6.cdr0.net',
+    },    /* for tests */
   };
 
   const projectConfig = ports[name];
@@ -23,7 +34,7 @@ module.exports = function (name) {
   }
 
   // If we have something, and it is a number, use it for all sub-types
-  if (typeof projectConfig === "number") {
+  if (typeof projectConfig.port === "number") {
     return projectConfig;
   }
 
